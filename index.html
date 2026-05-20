@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>🎂 Happy Birthday Anushree!</title>
+  <meta name="description" content="A special 3D animated birthday greeting just for you." />
+  <meta name="theme-color" content="#0f0a1a" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- Three.js -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============================================
+       PHASE 1 — Passcode Lock Screen
+       ============================================ -->
+  <div id="lock-screen">
+    <div class="lock-panel">
+      <div class="lock-icon">🔒</div>
+      <h1 class="lock-title">Enter Passcode</h1>
+      <p class="lock-subtitle">Hint: it's a special number ✨</p>
+
+      <div class="dots-container" id="dots">
+        <span class="dot" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+      </div>
+
+      <div class="keypad" id="keypad">
+        <button class="key-btn" data-key="1">1</button>
+        <button class="key-btn" data-key="2">2</button>
+        <button class="key-btn" data-key="3">3</button>
+        <button class="key-btn" data-key="4">4</button>
+        <button class="key-btn" data-key="5">5</button>
+        <button class="key-btn" data-key="6">6</button>
+        <button class="key-btn" data-key="7">7</button>
+        <button class="key-btn" data-key="8">8</button>
+        <button class="key-btn" data-key="9">9</button>
+        <button class="key-btn hidden-btn"></button>
+        <button class="key-btn" data-key="0">0</button>
+        <button class="key-btn fn-btn" data-key="del">⌫</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Three.js Particle Canvas -->
+  <canvas id="three-canvas"></canvas>
+
+  <!-- ============================================
+       MAIN CONTENT — Full-screen hero image
+       ============================================ -->
+  <div id="main-content">
+    <div class="hero-section" id="hero-section">
+      <img src="assets/Picsart_26-05-20_11-11-14-080.png"
+           alt="Happy Birthday Anushree — Collage"
+           class="hero-image"
+           id="hero-image" />
+      <div class="hero-overlay"></div>
+
+      <!-- Clickable camera hotspot (top area of image) -->
+      <div class="camera-hotspot" id="camera-hotspot">
+        <div class="hotspot-ring"></div>
+        <div class="hotspot-label">📷 tap to open reel</div>
+      </div>
+
+      <!-- Birthday text at the bottom -->
+      <div class="hero-content" id="hero-content">
+        <span class="hero-emoji" id="hero-emoji">🎂</span>
+        <h1 class="hero-title">
+          Happy Birthday
+          <span class="hero-name" id="hero-name">Anushree!</span>
+        </h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       CAMERA REEL OVERLAY
+       ============================================ -->
+  <div id="camera-reel" class="camera-reel">
+    <!-- Film sprocket strip decoration (top) -->
+    <div class="film-strip film-strip-top">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <!-- Close button -->
+    <button class="reel-close" id="reel-close">✕</button>
+
+    <!-- Slide container -->
+    <div class="reel-viewport" id="reel-viewport">
+      <!-- Slides injected by JS -->
+    </div>
+
+    <!-- Photo counter & message -->
+    <div class="reel-info">
+      <p class="reel-message" id="reel-message"></p>
+      <div class="reel-dots" id="reel-dots"></div>
+      <p class="reel-hint">swipe or tap arrows · auto-advances</p>
+    </div>
+
+    <!-- Navigation arrows -->
+    <button class="reel-arrow reel-arrow-left" id="reel-prev">‹</button>
+    <button class="reel-arrow reel-arrow-right" id="reel-next">›</button>
+
+    <!-- Film sprocket strip decoration (bottom) -->
+    <div class="film-strip film-strip-bottom">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <!-- ============================================
+       Photo Detail Modal (kept for direct taps)
+       ============================================ -->
+  <div id="photo-modal">
+    <div class="modal-photo-wrap" id="modal-photo-wrap">
+      <img id="modal-img" src="" alt="Birthday photo" />
+    </div>
+    <p class="modal-message" id="modal-message"></p>
+    <p class="modal-hint">tap anywhere to close</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
