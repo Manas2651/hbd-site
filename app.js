@@ -24,13 +24,18 @@ const CONFIG = {
    * The MAIN hero image (Picsart_26-05-20_11-11-14-080.png) is separate.
    */
   photos: [
-    { src: 'assets/IMG-20260109-WA0190.png',           message: "Here's to another amazing year! 🎉" },
-    { src: 'assets/IMG-20260119-WA0299.jpg',            message: 'You make the world brighter! ✨' },
-    { src: 'assets/IMG-20260119-WA0427.png',            message: 'Cheers to you, superstar! 🌟' },
-    { src: 'assets/Picsart_26-01-28_03-31-21-500.png',  message: 'May all your dreams come true! 🎂' },
-    { src: 'assets/Picsart_26-01-28_17-13-50-373.png',  message: 'Another year of awesomeness! 🥳' },
-    { src: 'assets/Picsart_26-05-20_11-22-06-693.jpg',  message: 'Wishing you endless joy! 💖' },
-    { src: 'assets/Picsart_26-05-20_11-26-20-077.png',  message: 'You are truly one of a kind! 🌈' },
+    { src: 'assets/20260119_161856.jpg',                message: "Here's to another amazing year! 🎉" },
+    { src: 'assets/20260119_163452 (1).jpg',            message: 'You make the world brighter! ✨' },
+    { src: 'assets/IMG-20260109-WA0190.jpg',            message: 'Cheers to you, superstar! 🌟' },
+    { src: 'assets/IMG-20260119-WA0299.jpg',            message: 'May all your dreams come true! 🎂' },
+    { src: 'assets/IMG-20260119-WA0427.jpg',            message: 'Another year of awesomeness! 🥳' },
+    { src: 'assets/IMG-20260119-WA0566.jpg',            message: 'Wishing you endless joy! 💖' },
+    { src: 'assets/Picsart_26-01-27_23-56-38-603.png',  message: 'You are truly one of a kind! 🌈' },
+    { src: 'assets/Picsart_26-01-28_03-31-21-500.png',  message: 'Keep shining bright! ✨' },
+    { src: 'assets/Picsart_26-01-28_11-42-23-822.png',  message: 'Best wishes today and always! 🎈' },
+    { src: 'assets/Picsart_26-01-28_16-10-20-928.png',  message: 'Enjoy your special day! 🎁' },
+    { src: 'assets/Picsart_26-01-28_17-13-50-373.png',  message: 'To many more adventures! 🌟' },
+    { src: 'assets/Picsart_26-01-30_02-30-12-086.png',  message: 'Happy Birthday! 🎂' },
   ],
 };
 
